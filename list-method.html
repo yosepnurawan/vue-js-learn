@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="member in members">
+                {{ member.nama }}
+            </li>
+        </ul>
+    </div>
+
+    <!-- MUTATING (push, pop, shift, unshif) = perubahan yang merubah objek aslinya
+    NON MUTATING (filter concat, slice) = perubahan yang tidak merubah objek aslinya -->
+
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                members: [
+                    { nama: "yosep", umur: 11 },
+                    { nama: "lham", umur: 13 },
+                    { nama: "devri", umur: 15 },
+                ]
+            },
+        });  
+    </script>
+</body>
+</html>

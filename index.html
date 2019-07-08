@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        {{ nama }} - {{ umur }}
+        <br/>
+        {{ pria ? 'Dia Laki - Laki' : 'Dia Perempuan'}}
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        data = {
+            nama: "yosep",
+            umur: "17 Tahun",
+            pria: true,
+        }
+        
+        // freeze untuk hasil object tidak bisa diganti2 secara langsung
+        // Object.freeze(data)
+
+        var vm = new Vue({
+            el: '#app',
+            data: data
+        });  
+    </script>
+</body>
+</html>
